@@ -116,30 +116,16 @@
 						<div class="inner">
 							<h1>Sign Up</h1>
 							<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
-							<p><span class="error">* required field</span></p>
+							<p><span class="error">All fields are required </span></p>
 							<div id="login-box">
   								<div class="left">
 									 <input type="text" name="first" placeholder="First Name" />
-									 <span class="error">* <?php echo $firstErr;?></span>
-  									 <br><br>
 									 <input type="text" name="last" placeholder="Last Name" />
-									 <span class="error">* <?php echo $lastErr;?></span>
-  									 <br><br>
    									 <input type="text" name="username" placeholder="Username" />
-									 <span class="error">* <?php echo $usernameErr;?></span>
-  									 <br><br>
    									 <input type="text" name="email" placeholder="E-mail" />
-									 <span class="error">* <?php echo $emailErr;?></span>
-  									 <br><br>
     									 <input type="password" name="password" placeholder="Password" />
-									 <span class="error">* <?php echo $passwordErr;?></span>
-  									 <br><br>
 									 <input type="text" name="address" placeholder="Address" />
-									 <span class="error">* <?php echo $addressErr;?></span>
-  									 <br><br>
 									 <input type="text" name="city" placeholder="City" />
-									 <span class="error">* <?php echo $cityErr;?></span>
-  									 <br><br>
 									 <select>
 										<option value="state">Select State</option>
 										<option value="AL">Alabama</option>
@@ -194,8 +180,6 @@
 										<option value="WI">Wisconsin</option>
 										<option value="WY">Wyoming</option>
 									 </select>
-									 <span class="error">* <?php echo $stateErr;?></span>
-  									 <br><br>
 									 <input type="text" name="zip" placeholder="Zip Code" />
 									 <p>      </p>
    									 <input type="submit" name="signup_submit" value="Sign me up" />
