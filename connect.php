@@ -67,17 +67,20 @@
 
 // Create connection
 $conn = pg_connect("host=ec2-54-83-55-125.compute-1.amazonaws.com dbusername=pywlzaoqipszkz port=5432 dbpassword=0cef79548840ab44a871e15280ac8d12856f411749c240719c6d6c803010cfc dbname=LitKits");
+if (!$conn) {
+  echo "An error occurred.\n";
+  exit;
+}
 
 $sql = "INSERT INTO SiteUsers (firstname, lastname, email, username, address, city, state, zipcode, password)
 values ('$firstname','$lastname','$email','$username','$address','$city','$state','$zipcode','$password')";
 
-if ($conn->pg_query($sql)){
-echo "New record is inserted sucessfully";
+$result = pg_query($conn, $sql);
+if (!$result) {
+  echo "An error occurred.\n";
+  exit;
 }
-else{
-echo "Error: ". $sql ."
-". $conn->error;
-}
+
 $conn->close();
 
 ?>
