@@ -1,23 +1,65 @@
 <?php
-$FirstName = filter_input(INPUT_POST, 'FirstName');
-$LastName = filter_input(INPUT_POST, 'LastName');
-$Email = filter_input(INPUT_POST, 'Email');
-$Username = filter_input(INPUT_POST, 'Username');
-$Address = filter_input(INPUT_POST, 'Address');
-$City = filter_input(INPUT_POST, 'City');
-$State = filter_input(INPUT_POST, 'State');
-$ZipCode = filter_input(INPUT_POST, 'ZipCode');
-$Password = filter_input(INPUT_POST, 'Password');
+			$firstErr = $lastErr = $usernameErr = $emailErr = $passwordErr = $addressErr = $cityErr = $stateErr = $zipErr "";
+			$first = $last = $username = $email = $password = $address = $city = $state = $zip = "";
 
-if (!empty($FirstName)){
-if (!empty($LastName)){
-if (!empty($Email)){
-if (!empty($Username)){
-if (!empty($Address)){
-if (!empty($City)){
-if (!empty($State)){
-if (!empty($ZipCode)){
-if (!empty($Password)){
+			if ($_SERVER["REQUEST_METHOD"] == "POST") {
+			  if (empty($_POST["first"])) {
+			    $firstErr = "First name is required";
+			  } else {
+			    $first = test_input($_POST["first"]);
+			  }
+
+			  if (empty($_POST["last"])) {
+			    $lastErr = "Last name is required";
+			  } else {
+			    $last = test_input($_POST["last"]);
+			  }
+
+			  if (empty($_POST["username"])) {
+			    $username = "";
+			  } else {
+			    $username = test_input($_POST["username"]);
+			  }
+
+			  if (empty($_POST["password"])) {
+			    $password = "";
+			  } else {
+			    $password = test_input($_POST["password"]);
+			  }
+
+			  if (empty($_POST["address"])) {
+			    $address = "Address is required";
+			  } else {
+			    $address = test_input($_POST["address"]);
+			  }
+			  
+			  if (empty($_POST["city"])) {
+			    $city = "City is required";
+			  } else {
+			    $city = test_input($_POST["city"]);
+			  }
+			  
+			  if ($_POST["state"] == "Select State") {
+			    $state = "State is required";
+			  } else {
+			    $state = test_input($_POST["state"]);
+			  }
+
+			  if (empty($_POST["zip"])) {
+			    $zip = "Zip code is required";
+			  } else {
+			    $zip = test_input($_POST["zip"]);
+			  }
+			}
+	
+
+		function test_input($data) {
+		  $data = trim($data);
+		  $data = stripslashes($data);
+		  $data = htmlspecialchars($data);
+		  return $data;
+		}
+
 $host = "ec2-54-83-55-125.compute-1.amazonaws.com";
 $dbusername = "pywlzaoqipszkz";
 $dbpassword = "0cef79548840ab44a871e15280ac8d12856f411749c240719c6d6c803010cfc9";
