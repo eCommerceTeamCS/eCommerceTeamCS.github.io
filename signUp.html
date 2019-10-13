@@ -14,6 +14,69 @@
 	</head>
 	
 	<body class="is-preload">
+		
+		<?php
+			$firstErr = $lastErr = $usernameErr = $emailErr = $passwordErr = $addressErr = $cityErr = $stateErr = $zipErr "";
+			$first = $last = $username = $email = $password = $address = $city = $state = $zip = "";
+
+			if ($_SERVER["REQUEST_METHOD"] == "POST") {
+			  if (empty($_POST["first"])) {
+			    $firstErr = "First name is required";
+			  } else {
+			    $first = test_input($_POST["first"]);
+			  }
+
+			  if (empty($_POST["last"])) {
+			    $lastErr = "Last name is required";
+			  } else {
+			    $last = test_input($_POST["last"]);
+			  }
+
+			  if (empty($_POST["username"])) {
+			    $username = "";
+			  } else {
+			    $username = test_input($_POST["username"]);
+			  }
+
+			  if (empty($_POST["password"])) {
+			    $password = "";
+			  } else {
+			    $password = test_input($_POST["password"]);
+			  }
+
+			  if (empty($_POST["address"])) {
+			    $address = "Address is required";
+			  } else {
+			    $address = test_input($_POST["address"]);
+			  }
+			  
+			  if (empty($_POST["city"])) {
+			    $city = "City is required";
+			  } else {
+			    $city = test_input($_POST["city"]);
+			  }
+			  
+			  if ($_POST["state"] == "Select State") {
+			    $state = "State is required";
+			  } else {
+			    $state = test_input($_POST["state"]);
+			  }
+
+			  if (empty($_POST["zip"])) {
+			    $zip = "Zip code is required";
+			  } else {
+			    $zip = test_input($_POST["zip"]);
+			  }
+			}
+	
+
+		function test_input($data) {
+		  $data = trim($data);
+		  $data = stripslashes($data);
+		  $data = htmlspecialchars($data);
+		  return $data;
+		}
+		?>
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -52,14 +115,31 @@
 					<div id="main">
 						<div class="inner">
 							<h1>Sign Up</h1>
+							<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+							<p><span class="error">* required field</span></p>
 							<div id="login-box">
   								<div class="left">
+									 <input type="text" name="first" placeholder="First Name" />
+									 <span class="error">* <?php echo $firstErr;?></span>
+  									 <br><br>
+									 <input type="text" name="last" placeholder="Last Name" />
+									 <span class="error">* <?php echo $lastErr;?></span>
+  									 <br><br>
    									 <input type="text" name="username" placeholder="Username" />
+									 <span class="error">* <?php echo $usernameErr;?></span>
+  									 <br><br>
    									 <input type="text" name="email" placeholder="E-mail" />
+									 <span class="error">* <?php echo $emailErr;?></span>
+  									 <br><br>
     									 <input type="password" name="password" placeholder="Password" />
-    									 <input type="password" name="password2" placeholder="Retype password" />
+									 <span class="error">* <?php echo $passwordErr;?></span>
+  									 <br><br>
 									 <input type="text" name="address" placeholder="Address" />
+									 <span class="error">* <?php echo $addressErr;?></span>
+  									 <br><br>
 									 <input type="text" name="city" placeholder="City" />
+									 <span class="error">* <?php echo $cityErr;?></span>
+  									 <br><br>
 									 <select>
 										<option value="state">Select State</option>
 										<option value="AL">Alabama</option>
@@ -114,11 +194,14 @@
 										<option value="WI">Wisconsin</option>
 										<option value="WY">Wyoming</option>
 									 </select>
+									 <span class="error">* <?php echo $stateErr;?></span>
+  									 <br><br>
 									 <input type="text" name="zip" placeholder="Zip Code" />
 									 <p>      </p>
    									 <input type="submit" name="signup_submit" value="Sign me up" />
  			 					</div>
 							</div>
+							</form>
 						</div>
 					</div>
 			</div>
