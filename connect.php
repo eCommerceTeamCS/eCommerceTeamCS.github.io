@@ -71,7 +71,7 @@ $conn = pg_connect("host=ec2-54-83-55-125.compute-1.amazonaws.com dbusername=pyw
 $sql = "INSERT INTO SiteUsers (firstname, lastname, email, username, address, city, state, zipcode, password)
 values ('$firstname','$lastname','$email','$username','$address','$city','$state','$zipcode','$password')";
 
-if ($conn->query($sql)){
+if ($conn->pg_query($sql)){
 echo "New record is inserted sucessfully";
 }
 else{
