@@ -3,55 +3,60 @@
 			$FirstName = $LastName = $Username = $Email = $Password = $Address = $City = $State = $ZipCode = "";
 
 			if ($_SERVER["REQUEST_METHOD"] == "POST") {
-			  if (empty($_POST["FirstName"])) {
+			  if (empty($_POST["firstname"])) {
 			    $firstErr = "First name is required";
 			  } else {
-			    $FirstName = test_input($_POST["FirstName"]);
+			    $firstname = test_input($_POST["firstname"]);
 			  }
 
-			  if (empty($_POST["LastName"])) {
+			  if (empty($_POST["lastname"])) {
 			    $lastErr = "Last name is required";
 			  } else {
-			    $LastName = test_input($_POST["LastName"]);
+			    $lastname = test_input($_POST["lastname"]);
 			  }
-
-			  if (empty($_POST["Username"])) {
+				
+			  if (empty($_POST["email"])) {
+			    $passwordError = "Email is required";
+			  } else {
+			    $email = test_input($_POST["email"]);
+			  }
+				
+			  if (empty($_POST["username"])) {
 			    $usernameError = "Username is required";
 			  } else {
-			    $Username = test_input($_POST["Username"]);
+			    $username = test_input($_POST["username"]);
 			  }
 
-			  if (empty($_POST["Password"])) {
-			    $passwordError = "Password is required";
-			  } else {
-			    $Password = test_input($_POST["Password"]);
-			  }
-
-			  if (empty($_POST["Address"])) {
+			  if (empty($_POST["address"])) {
 			    $addressErr = "Address is required";
 			  } else {
-			    $Address = test_input($_POST["Address"]);
+			    $address = test_input($_POST["address"]);
 			  }
 			  
-			  if (empty($_POST["City"])) {
+			  if (empty($_POST["city"])) {
 			    $cityErr = "City is required";
 			  } else {
-			    $City = test_input($_POST["City"]);
+			    $city = test_input($_POST["city"]);
 			  }
 			  
-			  if ($_POST["State"] == "Select State") {
+			  if ($_POST["state"] == "Select State") {
 			    $stateErr = "State is required";
 			  } else {
-			    $State = test_input($_POST["State"]);
+			    $state = test_input($_POST["state"]);
 			  }
 
-			  if (empty($_POST["ZipCode"])) {
+			  if (empty($_POST["zipcode"])) {
 			    $zipErr = "Zip code is required";
 			  } else {
-			    $ZipCode = test_input($_POST["ZipCode"]);
+			    $zipcode = test_input($_POST["zipcode"]);
 			  }
 			}
 	
+			if (empty($_POST["password"])) {
+			    $passwordError = "Password is required";
+			 } else {
+			    $password = test_input($_POST["password"]);
+			 }
 
 		function test_input($data) {
 		  $data = trim($data);
