@@ -81,6 +81,6 @@ if (!$result) {
   exit;
 }
 
-$conn->close();
+pg_close($conn);
 
 ?>
