@@ -70,16 +70,11 @@ $dbusername = "pywlzaoqipszkz";
 $dbpassword = "0cef79548840ab44a871e15280ac8d12856f411749c240719c6d6c803010cfc9";
 $dbname = "dfhnip1bkpfplp";
 // Create connection
-$conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
+$conn = pg_connect($host, $dbusername, $dbpassword, $dbname);
 
-
-if (mysqli_connect_error()){
-die('Connect Error ('. mysqli_connect_errno() .') '
-. mysqli_connect_error());
-}
-else{
 $sql = "INSERT INTO SiteUsers (firstname, lastname, email, username, address, city, state, zipCode, password)
 values ('$firstname','$lastname','$email','$username','$address','$city','$state','$zipCode','$password')";
+
 if ($conn->query($sql)){
 echo "New record is inserted sucessfully";
 }
