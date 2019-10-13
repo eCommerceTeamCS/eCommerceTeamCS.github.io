@@ -66,7 +66,7 @@
 		}
 
 // Create connection
-$conn = pg_connect("host=ec2-54-83-55-125.compute-1.amazonaws.com dbusername=pywlzaoqipszkz port=5432 dbpassword=0cef79548840ab44a871e15280ac8d12856f411749c240719c6d6c803010cfc dbname=dfhnip1bkpfplp");
+$conn = pg_connect("host=ec2-54-83-55-125.compute-1.amazonaws.com user=pywlzaoqipszkz port=5432 password=0cef79548840ab44a871e15280ac8d12856f411749c240719c6d6c803010cfc dbname=dfhnip1bkpfplp");
 if (!$conn) {
   echo "An error occurred.\n";
   exit;
