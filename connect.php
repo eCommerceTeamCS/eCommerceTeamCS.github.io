@@ -78,8 +78,8 @@ die('Connect Error ('. mysqli_connect_errno() .') '
 . mysqli_connect_error());
 }
 else{
-$sql = "INSERT INTO SiteUsers (FirstName, LastName, Email, Username, Address, City, State, ZipCode, Password)
-values ('$FirstName','$LastName','$Email','$Username','$Address','$City','$State','$ZipCode','$Password')";
+$sql = "INSERT INTO SiteUsers (firstname, lastname, email, username, address, city, state, zipCode, password)
+values ('$firstname','$lastname','$email','$username','$address','$city','$state','$zipCode','$password')";
 if ($conn->query($sql)){
 echo "New record is inserted sucessfully";
 }
