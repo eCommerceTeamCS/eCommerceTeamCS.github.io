@@ -65,12 +65,8 @@
 		  return $data;
 		}
 
-$host = "ec2-54-83-55-125.compute-1.amazonaws.com";
-$dbusername = "pywlzaoqipszkz";
-$dbpassword = "0cef79548840ab44a871e15280ac8d12856f411749c240719c6d6c803010cfc9";
-$dbname = "dfhnip1bkpfplp";
 // Create connection
-$conn = pg_connect("host=ec2-54-83-55-125.compute-1.amazonaws.com dbusername=pywlzaoqipszkz port=5432 dbpassword=0cef79548840ab44a871e15280ac8d12856f411749c240719c6d6c803010cfc  dbname=LitKits");
+$conn = pg_connect("host=ec2-54-83-55-125.compute-1.amazonaws.com dbusername=pywlzaoqipszkz port=5432 dbpassword=0cef79548840ab44a871e15280ac8d12856f411749c240719c6d6c803010cfc dbname=LitKits");
 
 $sql = "INSERT INTO SiteUsers (firstname, lastname, email, username, address, city, state, zipcode, password)
 values ('$firstname','$lastname','$email','$username','$address','$city','$state','$zipcode','$password')";
