@@ -72,8 +72,8 @@ $dbname = "dfhnip1bkpfplp";
 // Create connection
 $conn = pg_connect($host, $dbusername, $dbpassword, $dbname);
 
-$sql = "INSERT INTO SiteUsers (firstname, lastname, email, username, address, city, state, zipCode, password)
-values ('$firstname','$lastname','$email','$username','$address','$city','$state','$zipCode','$password')";
+$sql = "INSERT INTO SiteUsers (firstname, lastname, email, username, address, city, state, zipcode, password)
+values ('$firstname','$lastname','$email','$username','$address','$city','$state','$zipcode','$password')";
 
 if ($conn->query($sql)){
 echo "New record is inserted sucessfully";
