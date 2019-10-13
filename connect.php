@@ -1,6 +1,6 @@
 <?php
 			$firstErr = $lastErr = $usernameErr = $emailErr = $passwordErr = $addressErr = $cityErr = $stateErr = $zipErr "";
-			$FirstName = $LastName = $Username = $Email = $Password = $Address = $City = $State = $ZipCode = "";
+			$firstname = $lastname = $email = $username = $address = $city = $state = $zipcode = $password = "";
 
 			if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			  if (empty($_POST["firstname"])) {
