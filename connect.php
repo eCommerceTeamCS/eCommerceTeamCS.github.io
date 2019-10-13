@@ -1,55 +1,54 @@
 <?php
 			$firstErr = $lastErr = $usernameErr = $emailErr = $passwordErr = $addressErr = $cityErr = $stateErr = $zipErr "";
-			$first = $last = $username = $email = $password = $address = $city = $state = $zip = "";
+			$FirstNamw = $LastName = $Username = $Email = $Password = $Address = $City = $State = $ZipCode = "";
 
 			if ($_SERVER["REQUEST_METHOD"] == "POST") {
-			  if (empty($_POST["first"])) {
+			  if (empty($_POST["FirstName"])) {
 			    $firstErr = "First name is required";
-			  } 
-			  else {
-			    $first = test_input($_POST["first"]);
+			  } else {
+			    $FirstName = test_input($_POST["FirstName"]);
 			  }
 
-			  if (empty($_POST["last"])) {
+			  if (empty($_POST["LastName"])) {
 			    $lastErr = "Last name is required";
 			  } else {
-			    $last = test_input($_POST["last"]);
+			    $LastName = test_input($_POST["LastName"]);
 			  }
 
-			  if (empty($_POST["username"])) {
-			    $username = "";
+			  if (empty($_POST["Username"])) {
+			    $usernameError = "Username is required";
 			  } else {
-			    $username = test_input($_POST["username"]);
+			    $Username = test_input($_POST["Username"]);
 			  }
 
-			  if (empty($_POST["password"])) {
-			    $password = "";
+			  if (empty($_POST["Password"])) {
+			    $passwordError = "Password is required";
 			  } else {
-			    $password = test_input($_POST["password"]);
+			    $Password = test_input($_POST["Password"]);
 			  }
 
-			  if (empty($_POST["address"])) {
-			    $address = "Address is required";
+			  if (empty($_POST["Address"])) {
+			    $addressErr = "Address is required";
 			  } else {
-			    $address = test_input($_POST["address"]);
+			    $Address = test_input($_POST["Address"]);
 			  }
 			  
-			  if (empty($_POST["city"])) {
-			    $city = "City is required";
+			  if (empty($_POST["City"])) {
+			    $cityErr = "City is required";
 			  } else {
-			    $city = test_input($_POST["city"]);
+			    $City = test_input($_POST["City"]);
 			  }
 			  
-			  if ($_POST["state"] == "Select State") {
-			    $state = "State is required";
+			  if ($_POST["State"] == "Select State") {
+			    $stateErr = "State is required";
 			  } else {
-			    $state = test_input($_POST["state"]);
+			    $State = test_input($_POST["State"]);
 			  }
 
-			  if (empty($_POST["zip"])) {
-			    $zip = "Zip code is required";
+			  if (empty($_POST["ZipCode"])) {
+			    $zipErr = "Zip code is required";
 			  } else {
-			    $zip = test_input($_POST["zip"]);
+			    $ZipCode = test_input($_POST["ZipCode"]);
 			  }
 			}
 	
@@ -76,11 +75,6 @@ die('Connect Error ('. mysqli_connect_errno() .') '
 else{
 $sql = "INSERT INTO SiteUsers (FirstName, LastName, Email, Username, Address, City, State, ZipCode, Password)
 values ('$FirstName','$LastName','$Email','$Username','$Address','$City','$State','$ZipCode','$Password')";
- if($conn) {
-       echo 'connected';
-    } else {
-        echo 'there has been an error connecting';
-    } 
 if ($conn->query($sql)){
 echo "New record is inserted sucessfully";
 }
@@ -89,50 +83,5 @@ echo "Error: ". $sql ."
 ". $conn->error;
 }
 $conn->close();
-}
-}
-else{
-echo "First Name should not be empty";
-die();
-}
-}
-else{
-echo "Last Name should not be empty";
-die();
-}
-}
-else{
-echo "Email should not be empty";
-die();
-}
-}
-else{
-echo "Username should not be empty";
-die();
-}
-}
-else{
-echo "Address should not be empty";
-die();
-}
-}
-else{
-echo "City should not be empty";
-die();
-}
-}
-else{
-echo "State should not be empty";
-die();
-}
-}
-else{
-echo "Zip Code should not be empty";
-die();
-}
-}
-else{
-echo "Password should not be empty";
-die();
-}
+
 ?>
