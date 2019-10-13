@@ -75,6 +75,11 @@ die('Connect Error ('. mysqli_connect_errno() .') '
 else{
 $sql = "INSERT INTO SiteUsers (FirstName, LastName, Email, Username, Address, City, State, ZipCode, Password)
 values ('$FirstName','$LastName','$Email','$Username','$Address','$City','$State','$ZipCode','$Password')";
+ if($conn) {
+       echo 'connected';
+    } else {
+        echo 'there has been an error connecting';
+    } 
 if ($conn->query($sql)){
 echo "New record is inserted sucessfully";
 }
