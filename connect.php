@@ -50,13 +50,13 @@
 			  } else {
 			    $zipcode = test_input($_POST["zipcode"]);
 			  }
-			}
 	
 			if (empty($_POST["password"])) {
 			    $passwordError = "Password is required";
 			 } else {
 			    $password = test_input($_POST["password"]);
 			 }
+		}
 
 		function test_input($data) {
 		  $data = trim($data);
