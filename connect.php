@@ -74,7 +74,7 @@ if (!$conn) {
 
 $password = $_POST['password'];
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-$email = $_POST['email']
+$email = $_POST['email'];
 $sql = "INSERT INTO siteusers VALUES ('$_POST[firstname]','$_POST[lastname]','$email','$_POST[username]','$_POST[address]','$_POST[city]','$_POST[state]','$_POST[zipcode]','$password')";
 
 $result = pg_query($conn, $sql);
