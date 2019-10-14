@@ -58,12 +58,12 @@
 								<p><span class="error">All fields are required.</span>
 								<div id="login-box">
 									<div class="left">
-										 <input type="text" name="firstname" placeholder="First Name" required/>
-										 <input type="text" name="lastname" placeholder="Last Name" required/>
+										 <input type="text" name="firstname" pattern="^[a-zA-Z ]*$" oninvalid="setCustomValidity('Name cannot contain numbers')" onchange="try{setCustomValidity('')}catch(e){}" placeholder="First Name" required/>
+										 <input type="text" name="lastname" pattern="^[a-zA-Z ]*$" oninvalid="setCustomValidity('Name cannot contain numbers')" onchange="try{setCustomValidity('')}catch(e){}" placeholder="Last Name" required/>
 										 <input type="text" name="email" placeholder="E-mail" required/>
 										 <input type="text" name="username" placeholder="Username" required/>
 										 <input type="text" name="address" placeholder="Address" required/>
-										 <input type="text" name="city" placeholder="City" required/>
+										 <input type="text" name="city" pattern="^[a-zA-Z ]*$" oninvalid="setCustomValidity('City cannot contain numbers')" onchange="try{setCustomValidity('')}catch(e){}" placeholder="City" required/>
 										 <select name = "state" required>
 											<option value="state">Select State</option>
 											<option value="AL">Alabama</option>
