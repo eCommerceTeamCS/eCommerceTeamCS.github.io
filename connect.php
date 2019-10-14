@@ -22,7 +22,7 @@
 			  }
 				
 			  if (empty($_POST["username"])) {
-			    $username = $email;
+			    $username = test_input($_POST["email"]);
 			  } else {
 			    $username = test_input($_POST["username"]);
 			  }
@@ -75,7 +75,14 @@ if (!$conn) {
 $password = $_POST['password'];
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 $email = $_POST['email'];
-$sql = "INSERT INTO siteusers VALUES ('$_POST[firstname]','$_POST[lastname]','$email','$_POST[username]','$_POST[address]','$_POST[city]','$_POST[state]','$_POST[zipcode]','$password')";
+if (empty($_POST["username"])) {
+
+	$sql = "INSERT INTO siteusers VALUES ('$_POST[firstname]','$_POST[lastname]','$email','$email','$_POST[address]','$_POST[city]','$_POST[state]','$_POST[zipcode]','$password')";  
+ }
+else 
+{
+	$sql = "INSERT INTO siteusers VALUES ('$_POST[firstname]','$_POST[lastname]','$email','$_POST[username]','$_POST[address]','$_POST[city]','$_POST[state]','$_POST[zipcode]','$password')";
+}
 
 $result = pg_query($conn, $sql);
 if (!$result) {
