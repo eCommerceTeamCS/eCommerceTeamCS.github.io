@@ -81,7 +81,15 @@ if (empty($_POST["username"])) {
  }
 else 
 {
-	$sql = "INSERT INTO siteusers VALUES ('$_POST[firstname]','$_POST[lastname]','$email','$_POST[username]','$_POST[address]','$_POST[city]','$_POST[state]','$_POST[zipcode]','$hashed_password')";
+	$dupesql = "SELECT * FROM siteusers WHERE (username = '$_POST[username]' OR email = '$email')";
+	if (pg_num_rows($dupesql) > 0) {
+		$duplicateErr = "That username or email already exists. Please try again with a different username or email.";
+		exit;
+	}
+	else{
+		$sql = "INSERT INTO siteusers VALUES ('$_POST[firstname]','$_POST[lastname]','$email','$_POST[username]','$_POST[address]','$_POST[city]','$_POST[state]','$_POST[zipcode]','$hashed_password')";
+		$duplicateErr = "";
+	}
 }
 
 $result = pg_query($conn, $sql);
