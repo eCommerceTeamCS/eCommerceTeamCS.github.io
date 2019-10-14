@@ -86,6 +86,7 @@ else
 	
 	if (pg_num_rows($duperesult) > 0) {
 		$duplicateErr = "That username or email already exists. Please try again with a different username or email.";
+		header("Location: http://localhost/eCommerceTeamCS.github.io/signUp.html");
 		exit;
 	}
 	else{
