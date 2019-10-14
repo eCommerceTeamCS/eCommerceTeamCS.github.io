@@ -56,6 +56,7 @@
 							<h1>Sign Up</h1>
 							<form method="post" action="connect.php">
 								<p><span class="error">All fields are required.</span>
+									<span class="error" id = "duplicateError"</span>
 								<div id="login-box">
 									<div class="left">
 										 <input type="text" name="firstname" pattern="^[a-zA-Z ]*$" oninvalid="setCustomValidity('Name cannot contain numbers')" onchange="try{setCustomValidity('')}catch(e){}" placeholder="First Name" required/>
@@ -122,7 +123,7 @@
 										 <input type="password" name="password" placeholder="Password" required/> 
 										 <p>      </p>
 										 <input type="submit" formmethod="post" value="Sign me up" />
-										 <span><?php echo $duplicateErr ?> </span>
+										 
 									</div>
 								</div>
 							</form>
