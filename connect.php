@@ -22,7 +22,7 @@
 			  }
 				
 			  if (empty($_POST["username"])) {
-			    $usernameError = "Username is required";
+			    $username = $email;
 			  } else {
 			    $username = test_input($_POST["username"]);
 			  }
