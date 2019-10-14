@@ -76,9 +76,16 @@ $password = $_POST['password'];
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 $email = $_POST['email'];
 if (empty($_POST["username"])) {
-
-	$sql = "INSERT INTO siteusers VALUES ('$_POST[firstname]','$_POST[lastname]','$email','$email','$_POST[address]','$_POST[city]','$_POST[state]','$_POST[zipcode]','$hashed_password')";  
- }
+	$dupesql2 = "SELECT * FROM siteusers WHERE (email = '$_POST[email]')";
+	$duperesult2 = pg_query($conn, $dupesql2);
+	if (pg_num_rows($duperesult2) > 0) {
+		header("Location: http://localhost/eCommerceTeamCS.github.io/signUpDuplicate.html");
+	}
+	else{
+		$sql = "INSERT INTO siteusers VALUES ('$_POST[firstname]','$_POST[lastname]','$email','$email','$_POST[address]','$_POST[city]','$_POST[state]','$_POST[zipcode]','$hashed_password')";  
+		header("Location: http://localhost/eCommerceTeamCS.github.io/index.html");
+	}
+}
 else 
 {
 	$dupesql = "SELECT * FROM siteusers WHERE (username = '$_POST[username]' OR email = '$_POST[email]')";
@@ -92,7 +99,7 @@ else
 	}
 	else{
 		$sql = "INSERT INTO siteusers VALUES ('$_POST[firstname]','$_POST[lastname]','$email','$_POST[username]','$_POST[address]','$_POST[city]','$_POST[state]','$_POST[zipcode]','$hashed_password')";
-		$duplicateErr = "";
+		header("Location: http://localhost/eCommerceTeamCS.github.io/index.html");
 	}
 }
 
