@@ -81,8 +81,9 @@ if (empty($_POST["username"])) {
  }
 else 
 {
-	$dupesql = "SELECT * FROM siteusers WHERE (username = '$_POST[username]' OR email = '$email')";
+	$dupesql = "SELECT * FROM siteusers WHERE (username = '$_POST[username]' OR email = '$_POST[email]')";
 	$duperesult = pg_query($conn, $dupesql);
+	
 	if (pg_num_rows($duperesult) > 0) {
 		$duplicateErr = "That username or email already exists. Please try again with a different username or email.";
 		exit;
