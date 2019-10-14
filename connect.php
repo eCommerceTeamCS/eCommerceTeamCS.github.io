@@ -83,7 +83,7 @@ if (empty($_POST["username"])) {
 	}
 	else{
 		$sql = "INSERT INTO siteusers VALUES ('$_POST[firstname]','$_POST[lastname]','$email','$email','$_POST[address]','$_POST[city]','$_POST[state]','$_POST[zipcode]','$hashed_password')";  
-		header("Location: /index.html");
+		header("Location: http://localhost/eCommerceTeamCS.github.io/index.html");
 	}
 }
 else 
