@@ -56,6 +56,9 @@
 							<h1>Sign Up</h1>
 							<form method="post" action="connect.php">
 								<p><span class="error">All fields are required </span></p>
+								 <span class="error"><?php echo $firstErr;?></span>
+								 <span class="error"><?php echo $lastErr;?></span>
+								 <span class="error"><?php echo $nameErr;?></span>
 								<div id="login-box">
 									<div class="left">
 										 <input type="text" name="firstname" placeholder="First Name" required/>
@@ -118,7 +121,7 @@
 											<option value="WI">Wisconsin</option>
 											<option value="WY">Wyoming</option>
 										 </select>
-										 <input type="text" name="zipcode" pattern="^\d{5}$" oninvalid="setCustomValidity('Zipcode must be 5 numbers')" onchange="try{setCustomValidity('')}catch(e){}" placeholder="Zip Code" required/>
+										 <input type="text" name="zipcode" pattern="^\d{5}$" title="Zipcode must be 5 numbers." placeholder="Zip Code" required/>
 										 <input type="text" name="password" placeholder="Password" required/> 
 										 <p>      </p>
 										 <input type="submit" formmethod="post" value="Sign me up" />
