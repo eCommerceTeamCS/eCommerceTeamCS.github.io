@@ -72,8 +72,10 @@ if (!$conn) {
   exit;
 }
 
-$sql = "INSERT INTO SiteUsers (firstname, lastname, email, username, address, city, state, zipcode, password)
-values ('$firstname','$lastname','$email','$username','$address','$city','$state','$zipcode','$password')";
+$password = $_POST['password'];
+$hashed_password = password_hash($password, PASSWORD_DEFAULT);
+$email = $_POST['email']
+$sql = "INSERT INTO siteusers VALUES ('$_POST[firstname]','$_POST[lastname]','$email','$_POST[username]','$_POST[address]','$_POST[city]','$_POST[state]','$_POST[zipcode]','$password')";
 
 $result = pg_query($conn, $sql);
 if (!$result) {
