@@ -23,10 +23,10 @@
 		  $data = htmlspecialchars($data);
 		  return $data;
 		}
-
-$subject = 'LitKits';
-$headers = 'From: noreply @ company . com';
-mail($email,$subject,$message,$headers);
+<?php
+$message = wordwrap($message,70);
+mail($email,"LitKits",$message);
+?>
 
 $conn = pg_connect("host=ec2-54-83-55-125.compute-1.amazonaws.com port=5432 dbname=dfhnip1bkpfplp user=pywlzaoqipszkz password=0cef79548840ab44a871e15280ac8d12856f411749c240719c6d6c803010cfc9");
 if (!$conn) {
