@@ -10,21 +10,20 @@
 			    $emailErr = "Email is required";
 			  } else {
 			    $email = test_input($_POST["email"]);
-			  }
-				
+			  }	
 			  if (empty($_POST["message"])) {
 			    $messageError = "Message is required";
 			  } else {
 			    $message = test_input($_POST["message"]);
 			  }
-				
+			}	
 		function test_input($data) {
 		  $data = trim($data);
 		  $data = stripslashes($data);
 		  $data = htmlspecialchars($data);
 		  return $data;
 		}
-// Create connection
+
 $conn = pg_connect("host=ec2-54-83-55-125.compute-1.amazonaws.com port=5432 dbname=dfhnip1bkpfplp user=pywlzaoqipszkz password=0cef79548840ab44a871e15280ac8d12856f411749c240719c6d6c803010cfc9");
 if (!$conn) {
   echo "An error occurred.\n";
