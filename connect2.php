@@ -30,7 +30,7 @@ if (!$conn) {
   exit;
 }
 
-$sql = "INSERT INTO contactUs VALUES ('$_POST[name]','$_POST[email]','$_POST[message]')";
+$sql = "INSERT INTO contactus VALUES ('$_POST[name]','$_POST[email]','$_POST[message]')";
 header("Location: http://localhost/eCommerceTeamCS.github.io/index.html");
 
 $result = pg_query($conn, $sql);
