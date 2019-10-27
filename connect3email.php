@@ -1,4 +1,4 @@
-<php?>
+<?php
 //$message = wordwrap($message,70);
 //mail($email,"LitKits",$message);
 
