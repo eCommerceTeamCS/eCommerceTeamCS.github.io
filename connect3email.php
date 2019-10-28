@@ -39,9 +39,9 @@ $mail->Password = 'litkits2020!!';
 //Set who the message is to be sent from
 $mail->setFrom('litkitsco@gmail.com', 'First Last');
 //Set an alternative reply-to address
-$mail->addReplyTo('acs3af@virginia.edu', 'Anna Spearman');
+$mail->addReplyTo('litkitsco@gmail.com', 'First Last');
 //Set who the message is to be sent to
-$mail->addAddress('whoto@example.com', 'John Doe');
+$mail->addAddress('litkitsco@gmail.com', 'First Last');
 //Set the subject line
 $mail->Subject = 'Thanks for registering with us!';
 
