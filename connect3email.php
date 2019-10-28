@@ -9,6 +9,7 @@
  * The IMAP section shows how to save this message to the 'Sent Mail' folder using IMAP commands.
  */
 //Import PHPMailer classes into the global namespace
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 require '../vendor/autoload.php';
@@ -37,15 +38,15 @@ $mail->Username = 'litkitsco@gmail.com';
 //Password to use for SMTP authentication
 $mail->Password = 'litkits2020!!';
 //Set who the message is to be sent from
-$mail->setFrom('litkitsco@gmail.com', 'First Last');
+$mail->setFrom('litkitsco@gmail.com', 'LitKits');
 //Set an alternative reply-to address
-$mail->addReplyTo('litkitsco@gmail.com', 'First Last');
+$mail->addReplyTo('litkitsco@gmail.com', 'LitKits');
 //Set who the message is to be sent to
-$mail->addAddress('litkitsco@gmail.com', 'First Last');
+$mail->addAddress('litkitsco@gmail.com', 'LitKits');
 //Set the subject line
 $mail->Subject = 'Thanks for registering with us!';
 
-$mail->Body = 'This is a plain-text message body';
+$mail->Body = 'Welcome to our site. Thanks for signing up!';
 //Attach an image file
 $mail->addAttachment('images/phpmailer_mini.png');
 //send the message, check for errors
