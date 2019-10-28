@@ -156,6 +156,7 @@ if (!$mail->send()) {
     echo 'Message sent!';
  
 	}
+    }
 }
 
 $result = pg_query($conn, $sql);
