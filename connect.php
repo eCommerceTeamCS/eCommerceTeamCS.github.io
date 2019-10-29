@@ -2,7 +2,7 @@
 			ini_set('display_errors',1);
 			use PHPMailer\PHPMailer\PHPMailer;
 			use PHPMailer\PHPMailer\SMTP;
-			require '../vendor/autoload.php';
+			require '/vendor/autoload.php';
 			$firstErr = $lastErr = $usernameErr = $emailErr = $passwordErr = $addressErr = $cityErr = $stateErr = $zipErr = "";
 			//$firstname = $lastname = $email = $username = $address = $city = $state = $zipcode = $password = "";
 
