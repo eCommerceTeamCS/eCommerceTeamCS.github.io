@@ -1,7 +1,7 @@
 <?php
 			use PHPMailer\PHPMailer\PHPMailer;
 			use PHPMailer\PHPMailer\SMTP;
-			require '../vendor/autoload.php';
+			require '../htdocs/autoload.php';
 			
 			if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			  if (empty($_POST["name"])) {
