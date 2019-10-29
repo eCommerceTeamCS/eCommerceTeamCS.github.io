@@ -82,11 +82,11 @@ if (empty($_POST["username"])) {
 	$dupesql2 = "SELECT * FROM siteusers WHERE (email = '$_POST[email]')";
 	$duperesult2 = pg_query($conn, $dupesql2);
 	if (pg_num_rows($duperesult2) > 0) {
-		header("Location: http://localhost/eCommerceTeamCS.github.io/signUpDuplicate.html");
+		header("Location: https://lit-kits.herokuapp.com/signUpDuplicate.html");
 	}
 	else{
 		$sql = "INSERT INTO siteusers VALUES ('$_POST[firstname]','$_POST[lastname]','$email','$email','$_POST[address]','$_POST[city]','$_POST[state]','$_POST[zipcode]','$hashed_password')";  
-		header("Location: http://localhost/eCommerceTeamCS.github.io/index.html");
+		header("Location: https://lit-kits.herokuapp.com/index.html");
 	}
 }
 else 
@@ -97,12 +97,12 @@ else
 	if (pg_num_rows($duperesult) > 0) {
 		$duplicateErr = "That username or email already exists. Please try again with a different username or email.";
 		echo $duplicateErr;
-		header("Location: http://localhost/eCommerceTeamCS.github.io/signUpDuplicate.html");
+		header("Location: https://lit-kits.herokuapp.com/signUpDuplicate.html");
 		exit;
 	}
 	else{
 		$sql = "INSERT INTO siteusers VALUES ('$_POST[firstname]','$_POST[lastname]','$email','$_POST[username]','$_POST[address]','$_POST[city]','$_POST[state]','$_POST[zipcode]','$hashed_password')";
-		header("Location: http://localhost/eCommerceTeamCS.github.io/index.html");
+		header("Location: https://lit-kits.herokuapp.com/index.html");
 		
 //$message = wordwrap($message,70);
 //mail($email,"LitKits",$message);
