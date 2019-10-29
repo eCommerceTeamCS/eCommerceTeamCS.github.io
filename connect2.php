@@ -69,7 +69,6 @@ if (!$mail->send()) {
     echo 'Message sent!';
  
 	}
-    }
 
 
 
