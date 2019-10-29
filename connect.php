@@ -1,7 +1,7 @@
 <?php
 			use PHPMailer\PHPMailer\PHPMailer;
 			use PHPMailer\PHPMailer\SMTP;
-			require '../vendor/autoload.php';
+			require '../htdocs/autoload.php';
 			$firstErr = $lastErr = $usernameErr = $emailErr = $passwordErr = $addressErr = $cityErr = $stateErr = $zipErr = "";
 			//$firstname = $lastname = $email = $username = $address = $city = $state = $zipcode = $password = "";
 
