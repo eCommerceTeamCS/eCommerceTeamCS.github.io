@@ -60,7 +60,7 @@
 											<input type="text" name="name" id="name" placeholder="Name" />
 										</div>
 										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="Email" />
+											<input type="email" name="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" oninvalid="setCustomValidity('Email must be valid. It must contain an @ and a .')" id="email" placeholder="Email" />
 										</div>
 										<div class="field">
 											<textarea name="message" id="message" placeholder="Message"></textarea>
