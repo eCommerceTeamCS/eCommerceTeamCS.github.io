@@ -78,7 +78,7 @@ if (!$conn) {
 }
 
 $sql = "INSERT INTO contactus VALUES ('$_POST[name]','$_POST[email]','$_POST[message]')";
-header("Location: http://localhost/eCommerceTeamCS.github.io/index.html");
+header("Location: https://lit-kits.herokuapp.com/index.html");
 
 $result = pg_query($conn, $sql);
 if (!$result) {
