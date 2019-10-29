@@ -58,8 +58,7 @@ $mail->addReplyTo('litkitsco@gmail.com', 'LitKits');
 $mail->addAddress('litkitsco@gmail.com', 'LitKits');
 //Set the subject line
 $mail->Subject = 'Contact Us request';
-//$mail->Body = $_POST["name"] $_POST["email"]  $_POST["message"];
-$mail->Body = 'Test';
+$mail->Body = $_POST["name"]+$_POST["email"]+$_POST["message"];
 //Attach an image file
 $mail->addAttachment('images/phpmailer_mini.png');
 //send the message, check for errors
