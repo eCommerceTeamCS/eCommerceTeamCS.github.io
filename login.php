@@ -46,6 +46,7 @@
 	// If the password is a match, redirect to the member page and start the session!	
 	if($res)
       	{
+		session_name( 'Member' );
 		session_start();
 		$_SESSION["name"] = "LitKits";
 		
