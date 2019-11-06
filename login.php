@@ -39,17 +39,17 @@
         $checkpass = "SELECT * FROM siteusers WHERE (email = '$_POST[login]') OR (username = '$_POST[login]')";
 	$res = pg_query($conn, $checkpass);
 		
-	$arr = pg_fetch_array($res, 0, PGSQL_NUM);
-	echo $arr[0] 
-	echo $arr[1]
+	//$arr = pg_fetch_array($res, 0, PGSQL_NUM);
+	//echo $arr[0] 
+	//echo $arr[1]
 	
 
 	//$val = pg_fetch_result($res, 1, 0);
     
 	//if(password_verify($password,$val))
-      	{
+      	//{
         header("Location: https://lit-kits.herokuapp.com/index.html");
-      	}
+      	//}
 }
   
   
