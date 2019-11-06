@@ -39,7 +39,8 @@
         $checkpass = "SELECT 'password' FROM siteusers WHERE (email = '$_POST[login]') OR (username = '$_POST[login]')";
 	$checkpassresults = pg_query($conn, $checkpass);
     
-    	if($hashed_password == $checkpassresults)
+    	//if($hashed_password == $checkpassresults)
+		if(password_verify($password,$checkpassresults))
       {
         	header("Location: https://lit-kits.herokuapp.com/index.html");
       }
