@@ -36,8 +36,11 @@
 	    	header("Location: https://lit-kits.herokuapp.com/login.html");
 	    }
    	else  {
-        $checkpass = "SELECT 'city' FROM siteusers WHERE (email = '$_POST[login]') OR (username = '$_POST[login]')";
+        $checkpass = "SELECT 'password' FROM siteusers WHERE (email = '$_POST[login]') OR (username = '$_POST[login]')";
 	$res = pg_query($conn, $checkpass);
+	if (!$res {
+   		 die('Empty set.');
+		}
 	$val = pg_fetch_result($res, 1, 0);
     
 	if(password_verify($password,$val))
