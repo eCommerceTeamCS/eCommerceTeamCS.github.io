@@ -44,10 +44,19 @@
     
 	//if(password_verify($password,$val))
 	// If the password is a match, redirect to the member page and start the session!	
-	if(1==1)
+	if($res)
       	{
 		session_start();
-        header("Location: https://lit-kits.herokuapp.com/member.html");
+		$_SESSION["name"] = "LitKits";
+		
+		if(isset($_SESSION["name"]))
+		{
+			header("Location: https://lit-kits.herokuapp.com/member.html");
+		}
+		else
+		{
+			header("Location: https://lit-kits.herokuapp.com/login.html");
+		}
       	}
 }
   
