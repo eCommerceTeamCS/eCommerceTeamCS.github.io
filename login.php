@@ -39,17 +39,16 @@
         $checkpass = "SELECT 'password' FROM siteusers WHERE (email = '$_POST[login]') OR (username = '$_POST[login]')";
 	$res = pg_query($conn, $checkpass);	
 		
-	//$arr = pg_fetch_array($res, 0, PGSQL_NUM);
-	//echo $arr[0] 
-	//echo $arr[1]
-	
-
+	//res returns a boolean I need a way to get the hashed password from the table
 	//$val = pg_fetch_result($res, 1, 0);
     
 	//if(password_verify($password,$val))
-      	//{
-        header("Location: https://lit-kits.herokuapp.com/index.html");
-      	//}
+	// If the password is a match, redirect to the member page and start the session!	
+	if(1==1)
+      	{
+		session_start();
+        header("Location: https://lit-kits.herokuapp.com/member.html");
+      	}
 }
   
   
