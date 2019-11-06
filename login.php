@@ -38,9 +38,7 @@
    	else  {
         $checkpass = "SELECT 'password' FROM siteusers WHERE (email = '$_POST[login]') OR (username = '$_POST[login]')";
 	$res = pg_query($conn, $checkpass);
-	if (!$res {
-   		 die('Empty set.');
-		}
+	echo($res);
 	$val = pg_fetch_result($res, 1, 0);
     
 	if(password_verify($password,$val))
