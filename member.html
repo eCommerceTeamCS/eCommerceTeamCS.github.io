@@ -12,6 +12,12 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+	<?php
+		if(!isset($_SESSION["name"]))
+		{
+			header("Location: https://lit-kits.herokuapp.com/index.html");
+		}
+	?>
 	<body class="is-preload">
 		<!-- Wrapper -->
 			<div id="wrapper">
