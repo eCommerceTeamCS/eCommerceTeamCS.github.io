@@ -38,8 +38,14 @@
    	else  {
         $checkpass = "SELECT 'password' FROM siteusers WHERE (email = '$_POST[login]') OR (username = '$_POST[login]')";
 	$res = pg_query($conn, $checkpass);
-	$res2 = pg_fetch_array($conn, $checkpass)
-	echo($res2[0]);
+		
+	$arr = pg_fetch_array($res, 0, PGSQL_NUM);
+	echo $arr[0] 
+	echo $arr[1]
+		echo $arr[2]
+		echo $arr[3]
+		
+
 	$val = pg_fetch_result($res, 1, 0);
     
 	if(password_verify($password,$val))
