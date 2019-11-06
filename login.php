@@ -37,13 +37,13 @@
 	    }
    	else  {
         $checkpass = "SELECT 'password' FROM siteusers WHERE (email = '$_POST[login]') OR (username = '$_POST[login]')";
-	$checkpassresults = pg_query($conn, $checkpass);
+	$res = pg_query($conn, $checkpass);
+	$val = pg_fetch_result($res, 1, 0);
     
-    	//if($hashed_password == $checkpassresults)
-		if(password_verify($password,$checkpassresults))
-      {
-        	header("Location: https://lit-kits.herokuapp.com/index.html");
-      }
+	if(password_verify($password,$val))
+      	{
+        header("Location: https://lit-kits.herokuapp.com/index.html");
+      	}
 }
   
   
