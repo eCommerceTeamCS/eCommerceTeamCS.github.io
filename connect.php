@@ -87,7 +87,7 @@ if (empty($_POST["username"])) {
 	}
 	else{
 		$sql = "INSERT INTO siteusers VALUES ('$_POST[firstname]','$_POST[lastname]','$email','$email','$_POST[address]','$_POST[city]','$_POST[state]','$_POST[zipcode]','$hashed_password')";  
-		header("Location: https://lit-kits.herokuapp.com/index.html");
+		header("Location: https://lit-kits.herokuapp.com/member.html");
 	}
 }
 else 
@@ -103,7 +103,7 @@ else
 	}
 	else{
 		$sql = "INSERT INTO siteusers VALUES ('$_POST[firstname]','$_POST[lastname]','$email','$_POST[username]','$_POST[address]','$_POST[city]','$_POST[state]','$_POST[zipcode]','$hashed_password')";
-		header("Location: https://lit-kits.herokuapp.com/index.html");
+		header("Location: https://lit-kits.herokuapp.com/member.html");
 		
 //$message = wordwrap($message,70);
 //mail($email,"LitKits",$message);
