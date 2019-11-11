@@ -83,14 +83,14 @@
 										</div>
 									</a>
 								</article>
-								<article class="style2">
+								<article class="style3">
 									<span class="image">
-										<img src="images/newpic07.jpg" width = "30" height ="100" alt="" />
+										<img src="images/newpic03.jpg" width = "30" height = "100" alt="" />
 									</span>
-									<a href="birthdayKit.html">
-										<h2>Birthday Kit</h2>
+									<a href="gameDayKit.html">
+										<h2>Game Day Kit</h2>
 										<div class="content">
-											<p>Everyone deserves to feel special on their birthday. This kit is perfect for when you’ve got an important birthday coming up.</p>
+											<p>Sunday = Football. Root for your favorite NFL team by having all the fan necessities shipped to your doorstep.</p>
 										</div>
 									</a>
 								</article>
