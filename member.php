@@ -95,13 +95,15 @@
 									</a>
 								</article>
 				
-								<br>
-								<br>
-								<h2> Member Testimonials </h2>
-								<p> Insert Testimonials here </p>
+								
 
 
 						</section>
+							<div align="left">
+								<br>
+								<h2> Member Testimonials </h2>
+								<p> Insert Testimonials here </p>
+							</div>
 							<div align="right">
 							<form method="post" action="logout.php">
 								<input type="submit" href="index.html" formmethod="post" value="Log Out?" />
