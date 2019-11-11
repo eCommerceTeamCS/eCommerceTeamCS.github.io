@@ -41,7 +41,7 @@
 	
 	//res returns a boolean I need a way to get the hashed password from the table
 	$val = pg_fetch_result($res, 1, 0);
-		echo $val
+		//echo $val
     
 	//if(password_verify($password,$val))
 	// If the password is a match, redirect to the member page and start the session!	
