@@ -45,9 +45,8 @@
 	// If the password is a match, redirect to the member page and start the session!
 	if(password_verify($password,$hash))	
       	{
-		session_name( 'Member' );
-		session_start();
-		$_SESSION["name"] = "LitKits";
+		
+		$_SESSION["name"] = '$_POST[login]';
 		
 		if(isset($_SESSION["name"]))
 		{
