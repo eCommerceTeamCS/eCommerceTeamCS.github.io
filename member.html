@@ -13,9 +13,13 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<?php
-		if(!isset($_SESSION["name"]))
+		if(isset($_SESSION["name"]))
 		{
-			header("Location: https://lit-kits.herokuapp.com/index.html");
+			session_start();	
+		}
+	else
+		{
+			header("Location: index.html");
 		}
 	?>
 	<body class="is-preload">
