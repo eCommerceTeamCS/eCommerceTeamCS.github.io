@@ -57,12 +57,6 @@
 					</div>
 			</div>
 			<form action="https://test.bitpay.com/checkout" method="post">
-				<?php
-				session_start();	
-	   			if(!isset($_SESSION['login'])){
-					header("Location: login.html");		
-				} 
-				?>
   				<input type="hidden" name="action" value="checkout" />
   			   	<input type="hidden" name="posData" value="" />
   				<input type="hidden" name="data" value="1V6cI4jjXQsPmUC8ZluSIFJryNAjzL+pJmeoFY0e4LQWRg0XhX8kzc1/Ntbika+528mIj99hUbRWLvF5E6mOJ7MdotrPu1qBpk96gRnxIHQ=" />
