@@ -1,3 +1,10 @@
+	<?php
+		session_start();	
+	   	if(!isset($_SESSION['login'])){
+			header("Location: index.html");		
+		} 
+	?>
+
 <!DOCTYPE HTML>
 <!--
 	Phantom by HTML5 UP
@@ -12,15 +19,6 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<?php
-	   	if(!isset($_SESSION['login'])){
-			session_start();	
-		}
-	 	  else
-		{
-			header("Location: index.html");
-		}
-	?>
 	<body class="is-preload">
 		<!-- Wrapper -->
 			<div id="wrapper">
