@@ -45,7 +45,7 @@
 	for($i = 0; $i < $numrows; $i++) 
 	{
   		  $row = pg_fetch_array($res, $i);
-   		 echo $row["name"];
+   		 echo $row["password"];
 	}
 		
 	//res returns a boolean I need a way to get the hashed password from the table
