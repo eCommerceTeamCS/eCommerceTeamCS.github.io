@@ -40,17 +40,10 @@
 	$res = pg_query($conn, $checkpass);	
 	
 		$numrows = pg_numrows($res);
-
-	// Loop through rows in the result set
-	for($i = 0; $i < $numrows; $i++) 
-	{
-  		  $row = pg_fetch_array($res, $i);
-   		 echo $row["password"];
-	}
 		
 	//res returns a boolean I need a way to get the hashed password from the table
 	$val = pg_fetch_result($res, 1, 0);
-		//echo "hey ", $val;
+		echo "hey ", $val;
     
 	if(password_verify($password,$val))
 	// If the password is a match, redirect to the member page and start the session!	
