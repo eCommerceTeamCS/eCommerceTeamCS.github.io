@@ -127,6 +127,8 @@
 										</div>
 									</a>
 								</article>
+								
+								<p> Insert Testimonials here. </p>
 
 
 						</section>
