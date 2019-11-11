@@ -1,7 +1,7 @@
 	<?php
 		session_start();	
 	   	if(!isset($_SESSION['login'])){
-			header("Location: signUp.html");		
+			header("Location: login.html");		
 		} 
 	?>
 
