@@ -103,10 +103,19 @@ else
 	}
 	else{
 		$sql = "INSERT INTO siteusers VALUES ('$_POST[firstname]','$_POST[lastname]','$email','$_POST[username]','$_POST[address]','$_POST[city]','$_POST[state]','$_POST[zipcode]','$hashed_password')";
-		header("Location: https://lit-kits.herokuapp.com/member.html");
 		
-//$message = wordwrap($message,70);
-//mail($email,"LitKits",$message);
+		session_start();
+		$_SESSION['login']=true;
+		
+		if($_SESSION['login'] == true)
+		{
+			header("Location: member.php");
+		}
+		else
+		{
+			header("Location: login.html");
+		}		
+
 /**
  * This example shows settings to use when sending via Google's Gmail servers.
  * This uses traditional id & password authentication - look at the gmail_xoauth.phps
