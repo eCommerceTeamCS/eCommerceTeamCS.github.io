@@ -48,7 +48,7 @@
 		session_start();
 		$_SESSION['login']=true;
 		
-		if(isset($_SESSION["name"]))
+		if($_SESSION['login'] == true)
 		{
 			header("Location: https://lit-kits.herokuapp.com/member.html");
 		}
