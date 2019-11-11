@@ -4,11 +4,12 @@
 	   	if(!isset($_SESSION['login'])){
 			header("Location: login.html");		
 		} 
-		else 
+		if($_SESSION['login'] == true)
 		{
 			header("Location: bitpaybutton.php");
 		}
-	?>
+	
+?>
 
 <!DOCTYPE HTML>
 <!--
