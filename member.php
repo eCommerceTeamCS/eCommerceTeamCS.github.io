@@ -96,6 +96,7 @@
 								</article>
 				
 								<br>
+								<br>
 								<h2> Member Testimonials </h2>
 								<p> Insert Testimonials here </p>
 
