@@ -45,18 +45,18 @@
 	// If the password is a match, redirect to the member page and start the session!
 	if(password_verify($password,$hash))	
       	{
-		//session_name( 'Member' );
-		//session_start();
-		//$_SESSION["name"] = "LitKits";
+		session_name( 'Member' );
+		session_start();
+		$_SESSION["name"] = "LitKits";
 		
-		//if(isset($_SESSION["name"]))
-		//{
+		if(isset($_SESSION["name"]))
+		{
 			header("Location: https://lit-kits.herokuapp.com/member.php");
-		//}
-		//else
-		//{
-		//	header("Location: https://lit-kits.herokuapp.com/login.html");
-		//}
+		}
+		else
+		{
+			header("Location: https://lit-kits.herokuapp.com/login.html");
+		}
       	}
 	else
 	{
