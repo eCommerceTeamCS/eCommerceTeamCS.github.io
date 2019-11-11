@@ -33,20 +33,17 @@
 	  $notfoundresult = pg_query($conn, $notfound);
     
     if (pg_num_rows($notfoundresult) == 0) {
-	    	header("Location: https://lit-kits.herokuapp.com/login.html");
+	    	header("Location: badUsername.html");
 	    }
    	else  {
         $checkpass = "SELECT * FROM siteusers WHERE (email = '$_POST[login]') OR (username = '$_POST[login]')";
 	$res = pg_query($conn, $checkpass);	
 	
-	$numrows = pg_numrows($res);
-		
-
 	$row = pg_fetch_row($res);
 	$hash = $row[8];
-    
-	if(password_verify($password,$hash))
-	// If the password is a match, redirect to the member page and start the session!	
+    	
+	// If the password is a match, redirect to the member page and start the session!
+	if(password_verify($password,$hash))	
       	{
 		session_name( 'Member' );
 		session_start();
