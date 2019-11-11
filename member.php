@@ -104,6 +104,28 @@
 										</div>
 									</a>
 								</article>
+								<article class="style3">
+									<span class="image">
+										<img src="images/newpic08.jpg" width = "30" height = "100" alt="" />
+									</span>
+									<a href="sickKit.html">
+										<h2>Sick Kit</h2>
+										<div class="content">
+											<p>Under the weather? Can’t get out of bed? This kit has everything you need to make your sick day more bearable.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style4">
+									<span class="image">
+										<img src="images/newpic04.jpg" width = "30" height = "100" alt="" />
+									</span>
+									<a href="breakUpKit.html">
+										<h2>Break Up Kit</h2>
+										<div class="content">
+											<p>No one wants to deal with a break-up alone. Give your friends the support they need with this comforting kit.</p>
+										</div>
+									</a>
+								</article>
 
 
 						</section>
