@@ -45,8 +45,8 @@
 	// If the password is a match, redirect to the member page and start the session!
 	if(password_verify($password,$hash))	
       	{
-		
-		$_SESSION["name"] = '$_POST[login]';
+		session_start();
+		$_SESSION['login']=true;
 		
 		if(isset($_SESSION["name"]))
 		{
