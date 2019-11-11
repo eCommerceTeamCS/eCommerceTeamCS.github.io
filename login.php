@@ -50,11 +50,11 @@
 		
 		if($_SESSION['login'] == true)
 		{
-			header("Location: https://lit-kits.herokuapp.com/member.html");
+			header("Location: member.php");
 		}
 		else
 		{
-			header("Location: https://lit-kits.herokuapp.com/login.html");
+			header("Location: login.html");
 		}
       	}
 	else
