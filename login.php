@@ -36,7 +36,7 @@
 	    	header("Location: https://lit-kits.herokuapp.com/login.html");
 	    }
    	else  {
-        $checkpass = "SELECT 'password' FROM siteusers WHERE (email = '$_POST[login]') OR (username = '$_POST[login]')";
+        $checkpass = "SELECT * FROM siteusers WHERE (email = '$_POST[login]') OR (username = '$_POST[login]')";
 	$res = pg_query($conn, $checkpass);	
 	
 	$numrows = pg_numrows($res);
