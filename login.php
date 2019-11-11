@@ -63,7 +63,7 @@
       	}
 	else
 	{
-		header("Location: index.html");
+		header("Location: badPassword.html");
 	}
 		
 			
