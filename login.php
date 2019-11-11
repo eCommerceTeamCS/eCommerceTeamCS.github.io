@@ -33,7 +33,7 @@
 	  $notfoundresult = pg_query($conn, $notfound);
     
     if (pg_num_rows($notfoundresult) == 0) {
-	    	header("Location: badUsername.html");
+	    	header("Location: wrongUsername.html");
 	    }
    	else  {
         $checkpass = "SELECT * FROM siteusers WHERE (email = '$_POST[login]') OR (username = '$_POST[login]')";
@@ -60,7 +60,7 @@
       	}
 	else
 	{
-		header("Location: badPassword.html");
+		header("Location: wrongPassword.html");
 	}
 		
 			
