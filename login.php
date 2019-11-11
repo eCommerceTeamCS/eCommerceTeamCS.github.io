@@ -42,11 +42,13 @@
 	$numrows = pg_numrows($res);
 		
 	//res returns a boolean I need a way to get the hashed password from the table
-	$val = pg_fetch_result($res, 1, 0);
-		echo "hey ", $val;
-		echo $numrows;
+	//$val = pg_fetch_result($res, 1, 0);
+		//echo "hey ", $val;
+	$row = pg_fetch_row($res);
+	$hash = $row[8];
+		echo $hash;
     
-	if(password_verify($password,$val))
+	if(password_verify($password,$hash))
 	// If the password is a match, redirect to the member page and start the session!	
 	//if($res)
       	{
