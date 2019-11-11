@@ -51,7 +51,7 @@
 		
 		if(isset($_SESSION["name"]))
 		{
-			header("Location: https://lit-kits.herokuapp.com/member.php");
+			header("Location: https://lit-kits.herokuapp.com/member.html");
 		}
 		else
 		{
