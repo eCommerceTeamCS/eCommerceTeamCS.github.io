@@ -39,6 +39,15 @@
         $checkpass = "SELECT 'password' FROM siteusers WHERE (email = '$_POST[login]') OR (username = '$_POST[login]')";
 	$res = pg_query($conn, $checkpass);	
 	
+		$numrows = pg_numrows($res);
+
+	// Loop through rows in the result set
+	for($i = 0; $i < $numrows; $i++) 
+	{
+  		  $row = pg_fetch_array($res, $i);
+   		 echo $row["name"];
+	}
+		
 	//res returns a boolean I need a way to get the hashed password from the table
 	$val = pg_fetch_result($res, 1, 0);
 		//echo "hey ", $val;
