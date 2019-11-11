@@ -95,8 +95,9 @@
 									</a>
 								</article>
 				
-								
-								<p> Insert Testimonials here. </p>
+								<br>
+								<h2> Member Testimonials </h2>
+								<p> Insert Testimonials here </p>
 
 
 						</section>
