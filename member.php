@@ -102,7 +102,9 @@
 							<div align="left">
 								<br>
 								<h2> Member Testimonials </h2>
-								<p> Insert Testimonials here </p>
+								<p> "My best friend was really nervous about starting her freshman year at college. LitKits was the perfect gift for her - she loved the Back-to-School Kit!" -Mary K. </p>
+								<p> "I agreed last minute to host a viewing party for the Eagles vs. Patriots game. Realizing I had no time to get supplies for a successful party, LitKits came to the rescue with their personalized Game Day Kit. My guests loved it!" -Josh P. </p>
+								<p> "My girlfriend and I planned to have a date night to rekindle our relationship. With the LitKits Date Night Kit, I had everything I needed for a romantic night, and our relationship is stronger than ever." - Robert C. </p>
 							</div>
 							<div align="right">
 							<form method="post" action="logout.php">
