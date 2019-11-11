@@ -62,7 +62,7 @@
 							<section class="tiles">
 								<article class="style1">
 									<span class="image">
-										<img src="images/newpic01.jpg" width = "30" height ="100" alt="" />
+										<img src="images/newpic01.jpg"  alt="" />
 									</span>
 									<a href="dateNightKit.html">
 										<h2>Date Night Kit</h2>
@@ -72,20 +72,9 @@
 									</a>
 								</article>
 								
-								<article class="style5">
-									<span class="image">
-										<img src="images/newpic05.jpg" width = "30" height ="100" alt="" />
-									</span>
-									<a href="hangoverKit.html">
-										<h2>Hangover Kit</h2>
-										<div class="content">
-											<p>Got a big party coming up? Beat the hangover ahead of time. We’ve got the perfect kit to get you back on your feet the morning after.</p>
-										</div>
-									</a>
-								</article>
 								<article class="style3">
 									<span class="image">
-										<img src="images/newpic03.jpg" width = "30" height = "100" alt="" />
+										<img src="images/newpic03.jpg"  alt="" />
 									</span>
 									<a href="gameDayKit.html">
 										<h2>Game Day Kit</h2>
@@ -96,7 +85,7 @@
 								</article>
 								<article class="style2">
 									<span class="image">
-										<img src="images/newpic02.jpg" width = "30" height ="100"  alt="" />
+										<img src="images/newpic02.jpg"   alt="" />
 									</span>
 									<a href="backSchoolKit.html">
 										<h2>Back to School Kit</h2>
@@ -105,28 +94,7 @@
 										</div>
 									</a>
 								</article>
-								<article class="style3">
-									<span class="image">
-										<img src="images/newpic08.jpg" width = "30" height = "100" alt="" />
-									</span>
-									<a href="sickKit.html">
-										<h2>Sick Kit</h2>
-										<div class="content">
-											<p>Under the weather? Can’t get out of bed? This kit has everything you need to make your sick day more bearable.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style4">
-									<span class="image">
-										<img src="images/newpic04.jpg" width = "30" height = "100" alt="" />
-									</span>
-									<a href="breakUpKit.html">
-										<h2>Break Up Kit</h2>
-										<div class="content">
-											<p>No one wants to deal with a break-up alone. Give your friends the support they need with this comforting kit.</p>
-										</div>
-									</a>
-								</article>
+				
 								
 								<p> Insert Testimonials here. </p>
 
