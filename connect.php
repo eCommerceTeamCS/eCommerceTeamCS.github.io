@@ -87,7 +87,17 @@ if (empty($_POST["username"])) {
 	}
 	else{
 		$sql = "INSERT INTO siteusers VALUES ('$_POST[firstname]','$_POST[lastname]','$email','$email','$_POST[address]','$_POST[city]','$_POST[state]','$_POST[zipcode]','$hashed_password')";  
-		header("Location: https://lit-kits.herokuapp.com/member.html");
+		session_start();
+		$_SESSION['login']=true;
+		
+		if($_SESSION['login'] == true)
+		{
+			header("Location: member.php");
+		}
+		else
+		{
+			header("Location: login.html");
+		}
 	}
 }
 else 
