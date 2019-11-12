@@ -41,12 +41,14 @@
 	
 	$row = pg_fetch_row($res);
 	$hash = $row[8];
+		$name = $row[0];
     	
 	// If the password is a match, redirect to the member page and start the session!
 	if(password_verify($password,$hash))	
       	{
 		session_start();
 		$_SESSION['login']=true;
+		$_SESSION['name']=$name;
 		
 		if($_SESSION['login'] == true)
 		{
