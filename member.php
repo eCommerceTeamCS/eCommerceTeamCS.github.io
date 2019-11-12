@@ -3,6 +3,7 @@
 	   	if(!isset($_SESSION['login'])){
 			header("Location: login.html");		
 		} 
+		echo '<div class="output">'.$_SESSION["firstname"].'</div>';
 	?>
 
 <!DOCTYPE HTML>
