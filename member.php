@@ -57,8 +57,7 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1><?php
-		session_start();echo '<div class="output">'.$_SESSION["firstname"].'</div>';?></h1>
+							<h1>Hey there member! Learn more about being a member, and take a look at our most popular LitKits!</h1>
 							<p>As a member of LitKits, you get exclusive access to our personally designed survival kits. Choose from one of the pre-designed kits, or create your own with the items from our vast inventory. All you need to do is select the kit, give us the details of who to send it to, pay through BitPay, then your kit will be delivered! Check out our most popular kits below, and read some of our member testimonials.</p>
 							<section class="tiles">
 								<article class="style1">
